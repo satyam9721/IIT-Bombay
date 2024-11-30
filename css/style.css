@@ -1,0 +1,118 @@
+/* General table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    overflow-x: auto; /* Enable horizontal scrolling for tables */
+  }
+  
+  table th,
+  table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+  }
+  
+  /* Specific styling for table 2: Bold Names */
+  #dogs-container table td.name {
+    font-weight: bold;
+  }
+  
+  /* Specific styling for table 3: Bold, Italic, and Blue Names */
+  #fish-container table td.name {
+    font-weight: bold;
+    font-style: italic;
+    color: blue;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    table th,
+    table td {
+      font-size: 12px;
+      padding: 6px;
+    }
+  
+    table {
+      display: block;
+      overflow-x: auto; /* Make the table scrollable horizontally */
+      white-space: nowrap; /* Prevent breaking cells into new lines */
+    }
+  }
+  
+  /* Further adjustments for very small screens */
+  @media (max-width: 576px) {
+    table {
+      display: block;
+      overflow-x: auto;
+      border: 0;
+    }
+  
+    table th,
+    table td {
+      display: block;
+      text-align: right; /* Align text for readability */
+    }
+  
+    table th::before,
+    table td::before {
+      content: attr(data-label); /* Add data-labels for accessibility */
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  
+    table th {
+      display: none; /* Hide headers on stacked layout */
+    }
+  
+    table td {
+      border: none;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 10px;
+    }
+  
+    #dogs-container table td.name,
+    #fish-container table td.name {
+      font-size: 14px; /* Slightly larger font for names */
+    }
+  }
+  
+  h5 {
+    font-family: 'Poppins', sans-serif; /* Modern, clean font */
+    font-size: 18px; /* Default size */
+    font-weight: 600; /* Slightly bold for emphasis */
+    color: #333; /* Neutral dark color for readability */
+    text-align: center; /* Center-align the text */
+    margin: 20px 0; /* Spacing for visual separation */
+    letter-spacing: 1px; /* Slight letter spacing for a refined look */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle text shadow for depth */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth animations */
+  }
+  
+  h5:hover {
+    color: #007bff; /* Change color on hover (cool blue) */
+    transform: scale(1.1); /* Slight zoom effect */
+  }
+  
+  /* Responsive styling for smaller screens */
+  @media (max-width: 768px) {
+    h5 {
+      font-size: 16px; /* Adjust font size for medium screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    h5 {
+      font-size: 14px; /* Smaller font size for extra-small screens */
+      text-shadow: none; /* Remove shadow for better legibility */
+    }
+  }
+  
